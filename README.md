@@ -10,7 +10,7 @@ As Team xlr8, our team's goal is to design and develop an advanced autonomous ro
 4. schemes: Schematic Diagrams
 5. src: Software and Codes Required to Run Our Robot
 6. model: Files for Model 
-9. other: Detailed Descriptions of Components and Mechanisms
+9. 'other': Detailed Descriptions of Components and Mechanisms
 
 ## Introduction
 _This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
