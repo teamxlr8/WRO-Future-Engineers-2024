@@ -1,0 +1,53 @@
+#include <NewPing.h>
+#include <Servo.h>
+
+#define TRIGGER_PIN 14
+
+#define ECHO_PIN 15
+
+#define MAX_DISTANCE 500// Maximum distance we want to ping for (in centimeters). Maximum sensor distance is rated at 400-500cm.
+NewPing sonar1(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+#define TRIGGER_PIN 12
+
+#define ECHO_PIN 11
+
+NewPing sonar2(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+Servo servo_pin_9;
+int L = 0;
+int F = 0;
+String prefixstr = ""; 
+
+
+void setup() {
+  servo_pin_9.attach(9);
+  Serial.begin(9600);
+  pinMode(A3, INPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+
+
+  servo_pin_9.write( 90 );
+
+}
+
+void loop() {
+  Serial.println(digitalRead(A3));
+  L = sonar2.ping_cm();
+  F = sonar1.ping_cm();
+  Serial.print(prefixstr + "Left:"+sonar2.ping_cm() );
+  Serial.println();
+  Serial.print(prefixstr + "Front:"+sonar1.ping_cm() );
+  Serial.println();
+  digitalWrite( 2 , HIGH );
+  digitalWrite( 3 , LOW );
+  if (( ( L < 30 ) && ( L > 20 ) )) {
+    servo_pin_9.write( 90 );
+  }
+  if (( L > 30 )) {
+    servo_pin_9.write( 105 );
+  }
+  if (( ( L < 20 ) && ( L >= 0 ) )) {
+    servo_pin_9.write( 75 );
+  }
+}
+
