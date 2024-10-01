@@ -15,5 +15,3 @@ Lastly, yaw is the rotation around the vertical axis (Z-axis). It represents the
 The NavX sensor combines data from the accelerometer, gyroscope, and magnetometer to provide accurate measurements of yaw, pitch, and roll. This process, known as sensor fusion, involves filtering, calibration and fusion algorithms. Filtering is when raw data from each sensor is filtered to remove noise and improve accuracy. Then, sensors are calibrated to compensate for any biases or distortions. And lastly, advanced algorithms combine the data from all sensors to provide a stable and accurate estimate of the device's orientation.
 
 While roll, pitch and yaw are all three equally important in understanding and manipulating the orientation of a robot, we will be focusing on the yaw value, since we just need to alter the robot’s ability to turn left or right, by adjusting its heading.
-
-We are adding screenshots of this part of the code to this repository for reference.
