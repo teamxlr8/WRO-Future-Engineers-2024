@@ -1,5 +1,5 @@
 # WRO Future Engineers 2024
-##Introduction
+## Introduction
 Hello! This is team xlr8's WRO Future Engineer's repository. This repository includes details about our robot's construction, electricals, and software. We've recorded the progress of our robot and the various iterations we worked on throughout the process of preparing for the WRO competition.
 
 As Team xlr8, our team's goal is to design and develop an advanced autonomous robot with precise steering capabilities to navigate a complex track effectively. Using engineering workflows and iterative testing, our intent is to optimize performance and showcase our innovation and problem-solving skills.
